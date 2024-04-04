@@ -1,18 +1,33 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+
 }
 
-/* 
-  Add your pseudocode here
-*/
+function isPalindrome(str) {
 
-/*
-  Add written explanation of your solution here
-*/
+  str = str.toLowerCase();
+  
+  let start = 0;
+  let end = str.length - 1;
+  
+  while (start < end) {
+  
+    if (str[start] !== str[end]) {
+      return false;
+    }
 
-// You can run `node index.js` to view these console logs
+    start++;
+    end--;
+  }
+  
+  return true;
+}
+
+console.log(isPalindrome("madam")); 
+console.log(isPalindrome("racecar")); 
+console.log(isPalindrome("robot")); 
+
 if (require.main === module) {
-  // add your own custom tests in here
+ 
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
